@@ -1,0 +1,13 @@
+provider:
+  name: faas
+  gateway: http://localhost:8080
+
+functions:
+  sleepy:
+    lang: node
+    handler: ./sleepy
+    image: sleepy
+    environment:
+      sleep_time: 5000
+      write_timeout: 10
+      read_timeout: 10
